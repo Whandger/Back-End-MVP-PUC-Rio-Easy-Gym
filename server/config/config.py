@@ -26,8 +26,7 @@ class DevelopmentConfig(Config):
 class ProductionConfig(Config):
     DEBUG = False
 
-    # Produção também pode usar SQLite para o MVP
-    # (pode trocar por outro banco futuramente)
+    
     SQLALCHEMY_DATABASE_URI = os.getenv(
         "DATABASE_URL",
         "sqlite:///matchmovies_prod.db"
